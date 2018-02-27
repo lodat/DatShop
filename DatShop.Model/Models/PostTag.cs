@@ -12,9 +12,11 @@ namespace DatShop.Model.Models
    public class PostTag
     {
         [Key]
+        [Column(Order = 1)]
         public string TagID { get; set; }
 
         [Key]
+        [Column(Order = 2)]
         public int PostID { get; set; }
 
         [ForeignKey("TagID")]

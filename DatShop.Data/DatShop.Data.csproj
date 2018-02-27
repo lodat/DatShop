@@ -49,7 +49,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatShopDbContext.cs" />
+    <Compile Include="Infrastructures\DbFactory.cs" />
+    <Compile Include="Infrastructures\Disposable.cs" />
+    <Compile Include="Infrastructures\IDbFactory.cs" />
+    <Compile Include="Infrastructures\IRepository.cs" />
+    <Compile Include="Infrastructures\IUnitOfWork.cs" />
+    <Compile Include="Infrastructures\RepositoryBase.cs" />
+    <Compile Include="Infrastructures\UnitOfWork.cs" />
+    <Compile Include="Migrations\201802271422051_initial_DB.cs" />
+    <Compile Include="Migrations\201802271422051_initial_DB.Designer.cs">
+      <DependentUpon>201802271422051_initial_DB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ProductCategoryRepository.cs" />
+    <Compile Include="Repositories\ProductRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -60,6 +75,15 @@
       <Project>{6062c394-04f6-4a45-b982-81e08e943b82}</Project>
       <Name>DatShop.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DatShop.Model\DatShop.Model.csproj">
+      <Project>{3b5ad0ad-183b-400a-9e04-619e30b465b7}</Project>
+      <Name>DatShop.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201802271422051_initial_DB.resx">
+      <DependentUpon>201802271422051_initial_DB.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
