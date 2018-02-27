@@ -71,7 +71,6 @@ namespace DatShop.Data.Infrastructures
             return dbSet.Where(where).ToList();
         }
 
-
         public virtual int Count(Expression<Func<T, bool>> where)
         {
             return dbSet.Count(where);
