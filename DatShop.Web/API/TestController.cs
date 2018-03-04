@@ -5,7 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace DatShop.Web.API
+namespace DatShop.Web.Api
 {
     public class TestController : ApiController
     {
